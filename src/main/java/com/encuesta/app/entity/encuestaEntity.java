@@ -11,8 +11,7 @@ public class encuestaEntity{
     @Column(name = "id_encuesta")
     private int idEncuesta;
 
-    @Column(name = "id_pma", unique = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_pma")
     private int idPma;
 
     @Column(name = "nom_encuesta")
@@ -38,6 +37,9 @@ public class encuestaEntity{
 
     @Column
     private String a6;
+
+    @Column(name = "respsel")
+    private String respSel;
 
     @Column
     private String factor;
@@ -151,5 +153,13 @@ public class encuestaEntity{
 
     public void setIdAlumno(int idAlumno) {
         this.idAlumno = idAlumno;
+    }
+
+    public String getRespSel() {
+        return respSel;
+    }
+
+    public void setRespSel(String respSel) {
+        this.respSel = respSel;
     }
 }
