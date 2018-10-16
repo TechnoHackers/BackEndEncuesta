@@ -1,6 +1,6 @@
 package com.encuesta.app.dao;
 
-import com.encuesta.app.entity.alumnoEntity;
+import com.encuesta.app.entity.AlumnoEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -14,7 +14,7 @@ public class alumnoDaoImpl implements alumnoDao {
     private EntityManager entityManager;
 
     @Override
-    public List<alumnoEntity> findAll() {
+    public List<AlumnoEntity> findAll() {
 
         return entityManager.createQuery("from alumnoEntity").getResultList();
 

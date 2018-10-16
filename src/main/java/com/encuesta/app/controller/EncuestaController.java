@@ -1,6 +1,6 @@
 package com.encuesta.app.controller;
 
-import com.encuesta.app.entity.encuestaEntity;
+import com.encuesta.app.entity.EncuestaEntity;
 import com.encuesta.app.services.encuestaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @RequestMapping("/api/encuesta")
 @RestController
-public class encuestaController {
+public class EncuestaController {
 
 
     @Autowired
@@ -19,7 +19,7 @@ public class encuestaController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    private List<encuestaEntity> findAll(){
+    private List<EncuestaEntity> findAll(){
         return encuestaService.findAllByFac();
     }
 

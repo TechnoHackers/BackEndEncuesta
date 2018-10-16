@@ -1,7 +1,7 @@
 package com.encuesta.app.controller;
 
 
-import com.encuesta.app.entity.alumnoEntity;
+import com.encuesta.app.entity.AlumnoEntity;
 import com.encuesta.app.services.alumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ public class AlumnoController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    private List<alumnoEntity>findAll(){
+    private List<AlumnoEntity>findAll(){
         return alumnoService.findAll();
     }
 

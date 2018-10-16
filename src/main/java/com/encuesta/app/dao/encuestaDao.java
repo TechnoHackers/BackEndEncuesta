@@ -1,11 +1,11 @@
 package com.encuesta.app.dao;
 
-import com.encuesta.app.entity.encuestaEntity;
+import com.encuesta.app.entity.EncuestaEntity;
 
 import java.util.List;
 
 public interface encuestaDao {
 
-    public List<encuestaEntity> findAll();
-    public List<encuestaEntity> findAllByFac();
+    public List<EncuestaEntity> findAll();
+    public List<EncuestaEntity> findAllByFac();
 }

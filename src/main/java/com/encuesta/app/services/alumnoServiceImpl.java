@@ -1,7 +1,7 @@
 package com.encuesta.app.services;
 
 import com.encuesta.app.dao.alumnoDao;
-import com.encuesta.app.entity.alumnoEntity;
+import com.encuesta.app.entity.AlumnoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class alumnoServiceImpl implements alumnoService {
     private alumnoDao alumnoDao;
 
     @Override
-    public List<alumnoEntity> findAll() {
+    public List<AlumnoEntity> findAll() {
 
         return alumnoDao.findAll();
     }

@@ -1,7 +1,7 @@
 package com.encuesta.app.services;
 
 import com.encuesta.app.dao.encuestaDao;
-import com.encuesta.app.entity.encuestaEntity;
+import com.encuesta.app.entity.EncuestaEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +14,12 @@ public class encuestaServiceImpl implements encuestaService {
     private encuestaDao encuestaDao;
 
     @Override
-    public List<encuestaEntity> findAll() {
+    public List<EncuestaEntity> findAll() {
         return encuestaDao.findAll();
     }
 
     @Override
-    public List<encuestaEntity> findAllByFac() {
+    public List<EncuestaEntity> findAllByFac() {
         return encuestaDao.findAllByFac();
     }
 }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "alumnos")
-public class alumnoEntity {
+public class AlumnoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

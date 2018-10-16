@@ -1,6 +1,6 @@
 package com.encuesta.app.dao;
 
-import com.encuesta.app.entity.encuestaEntity;
+import com.encuesta.app.entity.EncuestaEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -16,12 +16,12 @@ public class encuestaDaoImpl implements encuestaDao {
     private EntityManager entityManager;
 
     @Override
-    public List<encuestaEntity> findAll() {
+    public List<EncuestaEntity> findAll() {
        return entityManager.createQuery("from encuestaEntity").getResultList();
     }
 
     @Override
-    public List<encuestaEntity> findAllByFac() {
+    public List<EncuestaEntity> findAllByFac() {
 
         List fac1,fac2,fac3,fac4,fac5,listM;
 
