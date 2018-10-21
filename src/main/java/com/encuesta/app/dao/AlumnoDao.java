@@ -4,7 +4,7 @@ import com.encuesta.app.entity.AlumnoEntity;
 
 import java.util.List;
 
-public interface alumnoDao {
+public interface AlumnoDao {
 
     public List<AlumnoEntity> findAll();
 

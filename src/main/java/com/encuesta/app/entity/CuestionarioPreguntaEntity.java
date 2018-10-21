@@ -17,6 +17,9 @@ public class CuestionarioPreguntaEntity {
     @Column(name = "id_alu")
     private Long idAlu;
 
+    @Column(name = "id_cuests")
+    private Long idCuestS;
+
     @Column(name = "respsel")
     private String respSel;
 
@@ -53,5 +56,13 @@ public class CuestionarioPreguntaEntity {
 
     public void setRespSel(String respSel) {
         this.respSel = respSel;
+    }
+
+    public Long getIdCuestS() {
+        return idCuestS;
+    }
+
+    public void setIdCuestS(Long idCuestS) {
+        this.idCuestS = idCuestS;
     }
 }

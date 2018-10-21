@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-public class alumnoDaoImpl implements alumnoDao {
+public class AlumnoDaoImpl implements AlumnoDao {
 
     @PersistenceContext
     private EntityManager entityManager;
