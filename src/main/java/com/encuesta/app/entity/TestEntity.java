@@ -1,5 +1,6 @@
 package com.encuesta.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class TestEntity implements Serializable {
     @Column(name = "nom_test")
     private String nomTest;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "test", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<CuestionarioEntity> cuestionario;
 

@@ -23,9 +23,11 @@ public class CuestionarioEntity implements Serializable {
     @Column(name = "esfactor")
     private String esFactor;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_test",nullable = false)
-    @JsonIgnore
+    @Column(name = "id_tipo_test", updatable = false, insertable = false)
+    private Long idtipotest;
+
+    @ManyToOne
+    @JoinColumn(name = "id_tipo_test", referencedColumnName = "id_test", updatable = false,nullable = false)
     private TestEntity test;
 
     public CuestionarioEntity() { }
@@ -65,5 +67,13 @@ public class CuestionarioEntity implements Serializable {
 
     public void setTest(TestEntity test) {
         this.test = test;
+    }
+
+    public Long getIdtipotest() {
+        return idtipotest;
+    }
+
+    public void setIdtipotest(Long idtipotest) {
+        this.idtipotest = idtipotest;
     }
 }
