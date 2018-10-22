@@ -16,7 +16,6 @@ public class alumnoServiceImpl implements alumnoService {
 
     @Override
     public List<AlumnoEntity> findAll() {
-
         return alumnoDao.findAll();
     }
 }

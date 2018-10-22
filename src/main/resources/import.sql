@@ -8,3 +8,8 @@ insert into cuestionarios(id_cuest,id_test,tiempo,esfactor) values (3,1,5,'facto
 insert into cuestionarios(id_cuest,id_test,tiempo,esfactor) values (4,1,2,'factor4');
 insert into cuestionarios(id_cuest,id_test,tiempo,esfactor) values (5,1,4,'factor5');
 
+insert into tests (id_test,nom_test) values (1,'PMA');
+insert into tests (id_test,nom_test) values (2,'PMB');
+insert into tests (id_test,nom_test) values (3,'PMC');
+insert into tests (id_test,nom_test) values (4,'PMD');
+insert into tests (id_test,nom_test) values (5,'PME');

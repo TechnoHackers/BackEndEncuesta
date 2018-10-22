@@ -7,8 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
-@RequestMapping("/api/pregunta/")
+@RequestMapping("/api/pregunta")
 @RestController
 public class PreguntaController {
 
@@ -33,10 +34,10 @@ public class PreguntaController {
     }
 
 
-    @GetMapping(value = "{id}")
-    public PreguntaEntity editar(@PathVariable(value = "id") Long id){
+    @GetMapping(value = "/{id}")
+    public Optional<PreguntaEntity> editar(@PathVariable(value = "id") Long id){
 
-        PreguntaEntity preguntaEntity=null;
+        Optional<PreguntaEntity> preguntaEntity=null;
 
         if(id>0){
             preguntaEntity=preguntaService.findOne(id);
@@ -47,7 +48,7 @@ public class PreguntaController {
     }
 
 
-    @DeleteMapping(value = "{id}")
+    @DeleteMapping(value = "/{id}")
     public PreguntaEntity delete(@PathVariable(value = "id") Long id){
 
         PreguntaEntity preguntaEntity=null;

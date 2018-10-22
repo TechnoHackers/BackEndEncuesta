@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PreguntaServiceImpl implements PreguntaService{
@@ -17,7 +18,7 @@ public class PreguntaServiceImpl implements PreguntaService{
     @Transactional(readOnly = true)
     @Override
     public List<PreguntaEntity> findAll() {
-        return preguntaDao.findAll();
+        return  preguntaDao.findAll();
     }
 
     @Transactional
@@ -28,14 +29,14 @@ public class PreguntaServiceImpl implements PreguntaService{
 
     @Transactional(readOnly = true)
     @Override
-    public PreguntaEntity findOne(Long id) {
-        return preguntaDao.findOne(id);
+    public Optional<PreguntaEntity> findOne(Long id) {
+        return preguntaDao.findById(id);
     }
 
     @Transactional
     @Override
     public void delete(Long id) {
-        preguntaDao.delete(id);
+        preguntaDao.deleteById(id);
     }
 
 }

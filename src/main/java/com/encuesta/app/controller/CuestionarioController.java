@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/cuestionario/")
+@RequestMapping("/api/cuestionario")
 @RestController
 public class CuestionarioController {
 
@@ -19,9 +19,8 @@ public class CuestionarioController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
-    private List<CuestionarioEntity> findAll(){
+    private List<CuestionarioEntity> GetAllCuestionarios(){
         return cuestionarioService.findAll();
     }
-
 
 }
