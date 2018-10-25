@@ -1,5 +1,7 @@
 package com.encuesta.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -34,6 +36,19 @@ public class PreguntaEntity {
 
     @Column
     private String a6;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cues", referencedColumnName = "id_cuest", insertable = false, updatable = false)
+    private CuestionarioEntity cuestionario;
+
+
+
+    @Transient
+    public String nombreCuestionario;
+
+    public String getnombreCuestionario() {
+        return cuestionario.getTest().getNomTest() + ' ' + cuestionario.getEsFactor();
+    }
 
     public PreguntaEntity() {
     }
@@ -108,5 +123,13 @@ public class PreguntaEntity {
 
     public void setA6(String a6) {
         this.a6 = a6;
+    }
+
+    public CuestionarioEntity getCuestionario() {
+        return cuestionario;
+    }
+
+    public void setCuestionario(CuestionarioEntity cuestionario) {
+        this.cuestionario = cuestionario;
     }
 }

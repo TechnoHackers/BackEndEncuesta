@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Set;
 
 @Entity
 @Table(name = "cuestionarios")
@@ -29,6 +31,10 @@ public class CuestionarioEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_tipo_test", referencedColumnName = "id_test", updatable = false,nullable = false)
     private TestEntity test;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "cuestionario")
+    private Set<PreguntaEntity> preguntas;
 
     public CuestionarioEntity() { }
 
@@ -75,5 +81,13 @@ public class CuestionarioEntity implements Serializable {
 
     public void setIdtipotest(Long idtipotest) {
         this.idtipotest = idtipotest;
+    }
+
+    public Set<PreguntaEntity> getPreguntas() {
+        return preguntas;
+    }
+
+    public void setPreguntas(Set<PreguntaEntity> preguntas) {
+        this.preguntas = preguntas;
     }
 }
