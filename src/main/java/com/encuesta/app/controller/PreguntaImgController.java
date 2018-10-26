@@ -23,17 +23,17 @@ public class PreguntaImgController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public PreguntaEntity postSavePreImg(@RequestParam Long idCues, @RequestParam MultipartFile pregunta, @RequestParam MultipartFile a1,
+    public PreguntaEntity postSavePreImg(@RequestParam Long idCues, @RequestParam MultipartFile nomPre, @RequestParam MultipartFile a1,
                                @RequestParam MultipartFile a2, @RequestParam MultipartFile a3, @RequestParam MultipartFile a4, @RequestParam MultipartFile a5, @RequestParam MultipartFile a6){
 
         PreguntaEntity preguntaEntity =new PreguntaEntity();
         preguntaEntity.setIdCues(idCues);
-        if(!pregunta.isEmpty() && !a1.isEmpty() && !a2.isEmpty() && !a3.isEmpty() && !a4.isEmpty() && !a5.isEmpty() && !a6.isEmpty()){
+        if(!nomPre.isEmpty() && !a1.isEmpty() && !a2.isEmpty() && !a3.isEmpty() && !a4.isEmpty() && !a5.isEmpty() && !a6.isEmpty()){
 
             String rootPath="c://temp/uploads";
             try {
 
-                byte[] bytes_pre=pregunta.getBytes();
+                byte[] bytes_pre=nomPre.getBytes();
                 byte[] bytes_a1=a1.getBytes();
                 byte[] bytes_a2=a2.getBytes();
                 byte[] bytes_a3=a3.getBytes();
@@ -41,8 +41,7 @@ public class PreguntaImgController {
                 byte[] bytes_a5=a5.getBytes();
                 byte[] bytes_a6=a6.getBytes();
 
-
-                Path rc_pre=Paths.get(rootPath + "//" + pregunta.getOriginalFilename());
+                Path rc_pre=Paths.get(rootPath + "//" + nomPre.getOriginalFilename());
                 Path rc_a1=Paths.get(rootPath + "//" + a1.getOriginalFilename());
                 Path rc_a2=Paths.get(rootPath + "//" + a2.getOriginalFilename());
                 Path rc_a3=Paths.get(rootPath + "//" + a3.getOriginalFilename());
@@ -58,7 +57,7 @@ public class PreguntaImgController {
                 Files.write(rc_a5,bytes_a5);
                 Files.write(rc_a6,bytes_a6);
 
-                preguntaEntity.setNomPre(rootPath+"/"+pregunta.getOriginalFilename());
+                preguntaEntity.setNomPre(rootPath+"/"+nomPre.getOriginalFilename());
                 preguntaEntity.setA1(rootPath+"/"+a1.getOriginalFilename());
                 preguntaEntity.setA2(rootPath+"/"+a2.getOriginalFilename());
                 preguntaEntity.setA3(rootPath+"/"+a3.getOriginalFilename());
