@@ -3,10 +3,11 @@ package com.encuesta.app.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "preguntas")
-public class PreguntaEntity {
+public class PreguntaEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,12 +44,12 @@ public class PreguntaEntity {
 
 
 
-    @Transient
+    /*@Transient
     public String nombreCuestionario;
 
     public String getnombreCuestionario() {
-        return cuestionario.getTest().getNomTest() + ' ' + cuestionario.getEsFactor();
-    }
+            return cuestionario.getTest().getNomTest() + ' ' + cuestionario.getEsFactor();
+    }*/
 
     public PreguntaEntity() {
     }
