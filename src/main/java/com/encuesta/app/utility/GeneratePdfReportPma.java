@@ -24,7 +24,6 @@ public class GeneratePdfReportPma {
 
 		try {
 
-
 			PdfPTable table = new PdfPTable(6);
 			table.setWidthPercentage(100);
 			table.setWidths(new int[] {7,2,2,2,2,2 });
