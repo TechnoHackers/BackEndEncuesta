@@ -65,3 +65,10 @@ insert preguntas(id_preg,	a1,	a2,	a3,	a4,	a5,	a6,	id_cues,nom_pre) values (47, '
 insert preguntas(id_preg,	a1,	a2,	a3,	a4,	a5,	a6,	id_cues,nom_pre) values (48,  'Adusto', 'Mortal', 'Lácteo', 'Abigarrado', '', '', 1,'LETAL');
 insert preguntas(id_preg,	a1,	a2,	a3,	a4,	a5,	a6,	id_cues,nom_pre) values (49, 'Disgustado', 'Herido', 'Orlado', 'Agobiado', '', '',  1,'LACERADO');
 insert preguntas(id_preg,	a1,	a2,	a3,	a4,	a5,	a6,	id_cues,nom_pre) values (50,  'Estudioso', 'Envidioso', 'Altanero', 'Accidental', '', '', 1,'INSOLENTE');
+
+
+insert into reporte_pma(id,nompdf,bajo,ten_bajo,promedio,ten_alto,alto) values (1,'Comprensión Verbal (V): Capacidad para comprender ideas expresadas en palabras escritas y/o habladas.','','X','','','');
+insert into reporte_pma(id,nompdf,bajo,ten_bajo,promedio,ten_alto,alto) values (2,'Concepción Espacial (E): Capacidad para imaginar y concebir objetos en dos o tres dimensiones.','X','','','','');
+insert into reporte_pma(id,nompdf,bajo,ten_bajo,promedio,ten_alto,alto) values (3,'Razonamiento (R): Capacidad para resolver problemas lógicos, prever y planear. Manejo de la capacidad deductiva e inductiva.','','','','X','');
+insert into reporte_pma(id,nompdf,bajo,ten_bajo,promedio,ten_alto,alto) values (4,'Cálculo Numérico (N): Capacidad de manejar números, de resolver rápidamente y con acierto problemas cuantitativos.','','X','','','');
+insert into reporte_pma(id,nompdf,bajo,ten_bajo,promedio,ten_alto,alto) values (5,'Fluidez Verbal (F): Capacidad para hablar y escribir con facilidad y rapidez.','','','','','X');
